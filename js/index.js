@@ -10,6 +10,7 @@ $(function() {
 			$(this).attr("src", $(this).attr("src1"));
 		})
 	})
+	
 
 	$('a.icon').not(".icon_not").click(function(event) {//每个图标点击
 		event.preventDefault();
@@ -35,7 +36,7 @@ $('#leap5-1 .a,#leap5-1 .b,#leap5-1 .c').css("opacity","0");
 		//		event.preventDefault();
 		$("#leap5").css("display", "none");
 		$("#leap5-1").css("display", "block");
-		$(".copy5").css("display", "none");
+//		$(".copy5").css("display", "block");
 		setTimeout(function() {
 			$('#leap5-1 .a').css("opacity","1");
 			$('#leap5-1 .a').addClass("animated bounceInLeft");
@@ -64,7 +65,7 @@ $('#leap1-1 .a,#leap1-1 .b,#leap1-1 .c').css("opacity","0");
 		//		event.preventDefault();
 		$("#leap1").css("display", "none");
 		$("#leap1-1").css("display", "block");
-		$(".copy1").css("display", "none");
+//		$(".copy1").css("display", "block");
 		setTimeout(function() {
 			$('#leap1-1 .a').css("opacity","1");
 			$('#leap1-1 .a').addClass("animated bounceInLeft");
@@ -92,7 +93,7 @@ $('#leap1-1 .a,#leap1-1 .b,#leap1-1 .c').css("opacity","0");
 		//		event.preventDefault();
 		$("#leap7").css("display", "none");
 		$("#leap7-1").css("display", "block");
-		$(".copy7").css("display", "none");
+//		$(".copy7").css("display", "block");
 		setTimeout(function() {
 			$('#leap7-1 .a').css("opacity","1");
 			$('#leap7-1 .a').addClass("animated bounceInLeft");
@@ -113,7 +114,7 @@ $('#leap1-1 .a,#leap1-1 .b,#leap1-1 .c').css("opacity","0");
 		//		event.preventDefault();
 		$("#leap8").css("display", "none");
 		$("#leap8-1").css("display", "block");
-		$(".copy8").css("display", "none");
+//		$(".copy8").css("display", "block");
 		setTimeout(function() {
 			$('#leap8-1 .a').css("opacity","1");
 			$('#leap8-1 .a').addClass("animated bounceInLeft");
@@ -127,4 +128,20 @@ $('#leap1-1 .a,#leap1-1 .b,#leap1-1 .c').css("opacity","0");
 		$("#leap8-1").css("display", "none");
 		$("#leap8").css("display", "block");
 	});
+//	后面两个icon的设定
+		$(function() {
+			$(".add1").click(function() {
+				$(".icon-1").css("display", "block");
+				$(".add1").css("display", "none");
+				$(".add2").css("display", "block");
+				$(".add2-1").css("display","none");
+			});
+
+			$(".add2").click(function() {
+				$(".add2").css("opacity", 0.4);
+				$("#show1").css("display", "none");
+				alert("已达上限哦");
+
+			});
+		})
 })

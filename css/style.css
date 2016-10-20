@@ -62,4 +62,64 @@
 #leap8-1 p{width: 116px; height:35px ;line-height: 35px; display: block; margin: 2px auto; border-radius: 10px;background: #48BFEF;margin-top:18px;}
 #leap8-1 p a{display: block;font-size: 16px;}
 
+/*新加进来的cookie区域的css*/
+.icon-1 {
+	
+	z-index: 999;
+	display: none;
+	left: 280px;
+	top: 285px;
+	position: absolute;
+	width: 90px;
+	height: 70px;
+	cursor: pointer;
+}
 
+.add1 h3 {
+	color: #6B6C6E;
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.add2 {
+	display: none;
+}
+.add2-1{
+	display: block;
+    margin: 32px auto;
+}
+.add-all {
+	background: url(../img/cookie-img/add.png);
+	background-size: cover;
+	cursor: pointer;
+	z-index: 999;
+}
+
+.icon1:hover {
+	opacity: 0.6;
+}
+
+.icon-1 span {
+    margin-top: 5px;
+    display: block;
+    /* margin-left: 32px; */
+    font-size: 18px;
+    color: #1E1E5A;
+    text-align: center;
+}
+
+/*.show1 {
+	background: gray;
+	padding: 20px;
+	display: none;
+	border: 1px dotted black;
+	position: absolute;
+	border-radius: 30px;
+	opacity: 0.9;
+	position: absolute;
+	top: 406px;
+	left: 201px;
+	z-index: 999;
+}*/
+/*.show-iframe-all {width: 700px;height: 450px;position: absolute;top: 63%;left: -263%;display: none;border: 2px solid black;}*/
+/*cookie结束*/
