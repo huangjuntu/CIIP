@@ -11,7 +11,7 @@ $(function() {
 		})
 	})
 
-	$('a.icon').click(function(event) {//每个图标点击
+	$('a.icon').not(".icon_not").click(function(event) {//每个图标点击
 		event.preventDefault();
 		$(".desk_left_bottom_one").removeClass("background1");//两个icon图标 点击后加入背景色
 		
