@@ -99,7 +99,7 @@ li {
     position: absolute;
     bottom: 60px;
     left: 0px;
-    width: 405px;
+    width: 645px;
 	z-index:101;
 }
 
@@ -258,6 +258,26 @@ li {
     background:#153869;
     border-bottom:1px solid #597aa5;
 }
+
+.inesainside2{
+    width: 240px;
+    cursor: pointer;
+}
+.inesainside2 li{
+    width: 240px;
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #7388a5;
+    background: #153869;
+    border-bottom: 1px solid #597aa5;
+}
+.secondclose,.thirdclose{
+    border: 1px solid #7388a5;
+}
+
+
 /* menu3 开始*/
 .child li{
     width: 300px;

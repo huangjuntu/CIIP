@@ -1,4 +1,4 @@
-//左下角菜单：鼠标点击其他区域消失
+// 左下角菜单：鼠标点击其他区域消失
 document.getElementById('clitrigger').onclick = function (e) {
     document.getElementById('menu').style.display = 'block';
     e = e || window.event;
@@ -8,21 +8,21 @@ document.getElementById('clitrigger').onclick = function (e) {
         e.cancelBubble = true;
     }
 }
-var odiv = document.getElementById('menu');
-document.onclick = function (e) {
-    e = e || window.event;
-    var s = e.target || e.srcElement;
-    if (e.srcElement) { //ie
-        if (!(s == odiv || odiv.contains(s))) {
-            odiv.style.display = 'none';
-        }
-    } else {
-        var res = odiv.compareDocumentPosition(s);
-        if (!(s == odiv || res == 20 || res == 0)) {
-            odiv.style.display = 'none';
-        }
-    }
-}
+// var odiv = document.getElementById('menu');
+// document.onclick = function (e) {
+//     e = e || window.event;
+//     var s = e.target || e.srcElement ;
+//     if (e.srcElement) { //ie
+//         if (!(s == odiv || odiv.contains(s))) {
+//             odiv.style.display = 'none';
+//         }
+//     } else {
+//         var res = odiv.compareDocumentPosition(s);
+//         if (!(s == odiv || res == 20 || res == 0)) {
+//             odiv.style.display = 'none';
+//         }
+//     }
+// }
 
 // 右键切换模式（管理者，仪表盘）
 $(function () {
@@ -111,7 +111,7 @@ $(".shalou").mouseover(function () {
 // 右侧按钮点击
 $(".button-icon").toggle(
     function () {
-        $("#desktop .icon").not(".icon_not").css("display", "none");
+        $("#desktop .icon").css("display", "none");
         $("#button-icon").text("关闭整合模式");
         $("#button-icon").removeClass("button-icon");
         $("#button-icon").addClass("button-icon1");
@@ -123,7 +123,7 @@ $(".button-icon").toggle(
 
     },
     function () {
-        $("#desktop .icon").not(".icon_not").css("display", "block");
+        $("#desktop .icon").css("display", "block");
         $("#button-icon").text("开启整合模式");
         $("#button-icon").removeClass("button-icon1");
         $("#button-icon").addClass("button-icon");
