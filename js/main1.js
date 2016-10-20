@@ -111,7 +111,7 @@ $(".shalou").mouseover(function () {
 // 右侧按钮点击
 $(".button-icon").toggle(
     function () {
-        $("#desktop .icon").css("display", "none");
+        $("#desktop .icon").not(".icon_not").css("display", "none");
         $("#button-icon").text("关闭整合模式");
         $("#button-icon").removeClass("button-icon");
         $("#button-icon").addClass("button-icon1");
@@ -123,7 +123,7 @@ $(".button-icon").toggle(
 
     },
     function () {
-        $("#desktop .icon").css("display", "block");
+        $("#desktop .icon").not(".icon_not").css("display", "block");
         $("#button-icon").text("开启整合模式");
         $("#button-icon").removeClass("button-icon1");
         $("#button-icon").addClass("button-icon");

@@ -252,7 +252,7 @@ select {
 	background: url(../img/shadow.png) no-repeat left center;
 }
 
-.add0:hover {
+/*.add0:hover {
 	opacity: 0.6;
 }
 
@@ -326,56 +326,10 @@ select {
 	display: block;
 	text-align: center;
 	margin-top: 53px
-}
+}*/
 
 
-/*新加进来的cookie区域的css*/
 
-.add-all {
-	width: 60px;
-	height: 60px;
-	background: url(../img/cookie-img/add.png);
-	background-size: cover;
-	cursor: pointer;
-	z-index: 999;
-}
-
-.icon-all {
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-	z-index: 999;
-	display: none;
-}
-
-.icon-all:hover {
-	opacity: 0.6;
-}
-
-.show-all {
-	background: gray;
-	padding: 20px;
-	display: none;
-	border: 1px dotted black;
-	position: absolute;
-	top: 5px;
-	left: 19px;
-	border-radius: 30px;
-	opacity: 0.9;
-}
-
-.show-iframe-all {
-	width: 700px;
-	height: 450px;
-	position: absolute;
-	top: 63%;
-	left: -263%;
-	display: none;
-	border: 2px solid black;
-}
-
-
-/*cookie结束*/
 
 
 /*复制的图片样式*/
