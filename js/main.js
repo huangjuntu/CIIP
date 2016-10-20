@@ -1,7 +1,7 @@
 //右下角时间日期开始
 var timerID = null
 var timerRunning = false
-	//socket = io.connect("http://10.200.43.36:10003");
+//socket = io.connect("http://10.200.43.36:10003");
 var winhref = window.location.href;
 var localIp = winhref.split('/');
 
@@ -10,14 +10,14 @@ var socket = io.connect(window.nodeIp);
 
 function MakeArray(size) {
 	this.length = size;
-	for(var i = 1; i <= size; i++) {
+	for (var i = 1; i <= size; i++) {
 		this[i] = "";
 	}
 	return this;
 }
 
 function stopclock() {
-	if(timerRunning)
+	if (timerRunning)
 		clearTimeout(timerID);
 	timerRunning = false
 }
@@ -88,7 +88,7 @@ var comNames = [
 ];
 var jianz = [];
 
-$(document).ready(function() {
+$(document).ready(function () {
 	//$('#digiclock').jdigiclock({
 	//    // Configuration goes here
 	//});
@@ -97,15 +97,16 @@ $(document).ready(function() {
 	function closeall() {
 		$(".first").fadeOut();
 		$(".secondclose ").hide();
+		$(".thirdclose").hide();
 		$(".test").hide();
 		$(".menucom").hide();
 		$(".menu4").hide();
-		$(".smartbox").find("li").each(function() {
+		$(".smartbox").find("li").each(function () {
 			$(this).removeClass("active") //小红图
 			$(this).removeClass("active2")
 		});
 
-		$(".smartbox").find("span").each(function() {
+		$(".smartbox").find("span").each(function () {
 			$(this).removeClass("trihover");
 
 			$(this).removeClass("trion");
@@ -149,21 +150,33 @@ $(document).ready(function() {
 	//	    	}
 	//	);
 
-	//	点击左下角的菜单
-	var show1 = 1;
-	$(".clitrigger").click(function() {
-		if(show1 == 1) {
-			$(".first").fadeIn();
-			show1 = 0;
+	// 点击左下角的菜单
+	var odiv = document.getElementById('menu');
+	document.onclick = function (e) {
+		e = e || window.event;
+		var s = e.target || e.srcElement;
+		if (e.srcElement) { //ie
+			if (!(s == odiv || odiv.contains(s))) {
+				odiv.style.display = 'none';
+				closeall();
+			}
 		} else {
-			$(".first").fadeOut();
-			closeall();
-			show1 = 1;
+			var res = odiv.compareDocumentPosition(s);
+			if (!(s == odiv || res == 20 || res == 0)) {
+				odiv.style.display = 'none';
+				closeall();
+			}
+		}
+	}
+	var show1 = 1;
+	$(".clitrigger").click(function () {
+		if (show1 == 1) {
+			$(".first").fadeIn();
 		}
 	});
 
 	//数据整合页面链接iframe置顶
-	$(".istack").click(function() {
+	$(".istack").click(function () {
 		closeall();
 	})
 	var $span = "<span>+</span>";
@@ -174,20 +187,35 @@ $(document).ready(function() {
 	     $(this).removeClass("active1");
 	     $(this).find("span").empty();
 	 });*/
-	$(".inesainside li").click(function() {
+	$(".inesainside li").click(function () {
 		//        $(this).addClass("active1").siblings().removeClass("active1");
 		//			$(this).find('span').remove();
 		//        $(this).append($span).siblings().find("span").empty();
 	})
 
-	$(".smartbox").find("li").click(function() {
+
+	// //menu其他区域操作
+
+	// $(document).click(function () {
+	// 	$('.submenu').hide();
+	// })
+	// $('.submenu').click(function (event) {
+	// 	event.stopPropagation();
+	// })
+
+
+
+
+
+	$(".smartbox").find("li").click(function () {
+		$(".third").hide();
 		var myindex = $(this).index();
 		$(".second").find("div").eq(myindex).css({
 			"display": "block"
 		}).siblings().css({
 			"display": "none"
 		});
-		if(myindex == 0) {
+		if (myindex == 0) {
 			$(this).addClass("active2").siblings().removeClass("active");
 			$(this).find(".tri").addClass("trion2");
 			$(this).siblings().find(".tri").removeClass("trion");
@@ -202,7 +230,7 @@ $(document).ready(function() {
 		}
 		$(this).find(".tri").addClass("trihover");
 		$(this).siblings().find(".tri").removeClass("trihover");
-	}).mouseover(function() {
+	}).mouseover(function () {
 		$(this).find(".tri").addClass("trihover");
 		$(this).siblings().find(".tri").removeClass("trihover");
 	});
@@ -216,7 +244,7 @@ $(document).ready(function() {
 	//  }
 	//	);
 
-	$(".top").on("click", function() {
+	$(".top").on("click", function () {
 
 		$("iframe").css({
 			"z-index": "102"
@@ -225,7 +253,7 @@ $(document).ready(function() {
 			"z-index": "103"
 		});
 	});
-	$(".img3").click(function() {
+	$(".img3").click(function () {
 		$("iframe").css({
 			"display": "none"
 		});
@@ -233,11 +261,34 @@ $(document).ready(function() {
 			"display": "none"
 		});
 	});
-	$(".img1").click(function() {
-			history.go(-1);
+	$(".img1").click(function () {
+		history.go(-1);
+	})
+
+
+	//第二层menu
+	$(".inesainside1").find("li").click(function (e) {
+		var pointY = e.pageY;
+		var myindex = $(this).index();
+		$(".third").css({
+			"margin-bottom": "253px",
+			"display": "block"
 		})
-		//3rd menu
-	$(".inesainside").find("li").click(function() {
+		$(".third").find("div").eq(myindex).css({
+			"display": "block",
+		}).siblings().css({
+			"display": "none"
+		});
+		$(this).find(".tri").addClass("trihover");
+		$(this).siblings().find(".tri").removeClass("trihover");
+	}).mouseover(function (e) {
+		$(this).find(".tri").addClass("trihover");
+		$(this).siblings().find(".tri").removeClass("trihover");
+	});
+
+
+	//3rd menu
+	$(".inesainside").find("li").click(function () {
 		var myindex = $(this).index();
 		$(".menu4").hide();
 		$(this).addClass("active1");
@@ -250,14 +301,14 @@ $(document).ready(function() {
 	});
 
 	//4th menu crete
-	$(".detail").click(function() {
+	$(".detail").click(function () {
 		var product = $(this).data("product");
 		var info = $(this).data("info");
 		var url = $(this).data("url");
 		var html = '';
 		$(".box").attr("src", url);
 		$("#info").text(info);
-		for(var i in product) {
+		for (var i in product) {
 			html += '<li class="toframe top" src="' + product[i][1] + '">' + product[i][0] + '<li>';
 		}
 		$("#pros").html(html);
@@ -266,32 +317,32 @@ $(document).ready(function() {
 		$(".child li").css('color', 'black');
 		$(this).css('color', 'red');
 	});
-	$(".biancheng").click(function() {
+	$(".biancheng").click(function () {
 		$("#window_biancheng").css("display", "block");
 	});
 	//app market b
 	//开始 li:not(.appl) span
-	$(".imghvr-shutter-out-diag-2").mouseover(function() {
+	$(".imghvr-shutter-out-diag-2").mouseover(function () {
 
 		var index = $(this).attr('order');
-		if(parseInt(index) >= 0) {
+		if (parseInt(index) >= 0) {
 			var html = '';
 
-			switch(parseInt(index)) { //合作伙伴是3个的样式设置
+			switch (parseInt(index)) { //合作伙伴是3个的样式设置
 				case 2:
-					for(var i in comNames[index]) {
+					for (var i in comNames[index]) {
 						html += '<li style=" height:14px; line-height:15px; margin-top:2px;font-size:12px">' + comNames[index][i] + '</li>';
 					}
 					$("figcaption p").css("margin-top", "3px").css("font-size", "8px");
 					break;
 				case 6: //合作伙伴是2个的样式设置
-					for(var i in comNames[index]) {
+					for (var i in comNames[index]) {
 						html += '<li style=" height:14px; line-height:15px; margin-top:3px">' + comNames[index][i] + '</li>';
 					}
 					$("figcaption p").css("margin-top", "10px");
 					break;
 				default: //合作伙伴是1个的样式设置
-					for(var i in comNames[index]) {
+					for (var i in comNames[index]) {
 						html += '<li style=" height:14px; line-height:15px; margin-top:3px;font-size:14px">' + comNames[index][i] + '</li>';
 					}
 					$("figcaption p").css("margin-top", "20px");
@@ -370,126 +421,126 @@ $(document).ready(function() {
 //   热插拔监控结束*/
 	//同步信息到其他屏(没动之前序号)
 
-	$('body').on('click', '.zhguangboIcon', function() { //云计算
+	$('body').on('click', '.zhguangboIcon', function () { //云计算
 		socket.emit('exe', {
 			"no": 6
 		});
 	});
-	$('body').on('click', '.leixingIcon', function() { //云计算
+	$('body').on('click', '.leixingIcon', function () { //云计算
 		socket.emit('exe', {
 			"no": 6
 		});
 	});
 
-	$('body').on('click', '#leap1', function() { //云计算
+	$('body').on('click', '#leap1', function () { //云计算
 		socket.emit('exe', {
 			"no": 1
 		});
 	});
 
-	$('body').on('click', '#leap2', function() { // 智慧制造
+	$('body').on('click', '#leap2', function () { // 智慧制造
 		socket.emit('exe', {
 			"no": 0
 		});
 	});
 
-	$('body').on('click', '#leap3', function() { // 商业不动产
+	$('body').on('click', '#leap3', function () { // 商业不动产
 		socket.emit('exe', {
 			"no": 14
 		});
 	});
 
-	$('body').on('click', '#leap4', function() { //非银行金融
+	$('body').on('click', '#leap4', function () { //非银行金融
 		socket.emit('exe', {
 			"no": 15
 		});
 	});
 
-	$('body').on('click', '#leap5', function() { //智慧建筑
+	$('body').on('click', '#leap5', function () { //智慧建筑
 		socket.emit('exe', {
 			"no": 0
 		});
 	});
 
-	$('body').on('click', '#leap6', function() { // 智慧交通
+	$('body').on('click', '#leap6', function () { // 智慧交通
 		socket.emit('exe', {
 			"no": 6
 		});
 	});
 
-	$('body').on('click', '#leap7', function() { //智慧政务
+	$('body').on('click', '#leap7', function () { //智慧政务
 		socket.emit('exe', {
 			"no": 7
 		});
 	});
 
-	$('body').on('click', '#leap8', function() { //智慧医疗
+	$('body').on('click', '#leap8', function () { //智慧医疗
 		socket.emit('exe', {
 			"no": 0
 		});
 	});
 
-	$('body').on('click', '#leap9', function() { //平安城市
+	$('body').on('click', '#leap9', function () { //平安城市
 		socket.emit('exe', {
 			"no": 0
 		});
 	});
 
-	$('body').on('click', '#leap10', function() { // 食品溯源
+	$('body').on('click', '#leap10', function () { // 食品溯源
 		socket.emit('exe', {
 			"no": 5
 		});
 	});
 
-	$('body').on('click', '#leap11', function() { //智慧教育
+	$('body').on('click', '#leap11', function () { //智慧教育
 		socket.emit('exe', {
 			"no": 9
 		});
 	});
 
-	$('body').on('click', '#leap12', function() { //智慧水务
+	$('body').on('click', '#leap12', function () { //智慧水务
 		socket.emit('exe', {
 			"no": 12
 		});
 	});
 
-	$('body').on('click', '.btn13', function() {
+	$('body').on('click', '.btn13', function () {
 		socket.emit('exe', {
 			"no": 13
 		});
 	});
 
-	$('body').on('click', '.btn14', function() {
+	$('body').on('click', '.btn14', function () {
 		socket.emit('exe', {
 			"no": 14
 		});
 	});
 
-	$('body').on('click', '.btn15', function() {
+	$('body').on('click', '.btn15', function () {
 		socket.emit('exe', {
 			"no": 15
 		});
 	});
 
-	$('body').on('click', '.btn16', function() {
+	$('body').on('click', '.btn16', function () {
 		socket.emit('exe', {
 			"no": 16
 		});
 	});
 
-	$('body').on('click', '.btn17', function() {
+	$('body').on('click', '.btn17', function () {
 		socket.emit('exe', {
 			"no": 17
 		});
 	});
 
-	$('body').on('click', '.btn18', function() {
+	$('body').on('click', '.btn18', function () {
 		socket.emit('exe', {
 			"no": 18
 		});
 	});
 
-	$('body').on('click', '.btn19', function() {
+	$('body').on('click', '.btn19', function () {
 		socket.emit('exe', {
 			"no": 19
 		});

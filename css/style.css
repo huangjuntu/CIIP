@@ -29,10 +29,13 @@
 			color:#7388a5;font-size:20px;text-align:center;border-bottom:1px solid #597aa5;float:left;}
 .first_menu_style{line-height:50px;}
 .first_menu img{margin:9px 0;}
-.second{float:right;width:135px;}
+.third{float:right;width: 240px;}
+.thirdclose{display: none;}
+.second{width:135px;margin-left: 270px; position: absolute;bottom: 0;}
 .secondclose{display:none;}
+
 .smartbox li:hover{color:#fff;background:#1e5096 url(../img/sanjiao1.png) no-repeat 240px center;}
-.inesainside1 li:hover{color:#fff;background:#1e5096;}
+.inesainside1 li:hover,.inesainside2 li:hover{color:#fff;background:#1e5096;}
 .img2{display:none;}
 .white{color:#fff;background: #153869;}
 .icon{font-size:20px;}

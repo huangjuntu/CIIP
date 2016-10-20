@@ -1,4 +1,4 @@
-//左下角菜单：鼠标点击其他区域消失
+// 左下角菜单：鼠标点击其他区域消失
 document.getElementById('clitrigger').onclick = function (e) {
     document.getElementById('menu').style.display = 'block';
     e = e || window.event;
@@ -11,7 +11,7 @@ document.getElementById('clitrigger').onclick = function (e) {
 var odiv = document.getElementById('menu');
 document.onclick = function (e) {
     e = e || window.event;
-    var s = e.target || e.srcElement;
+    var s = e.target || e.srcElement ;
     if (e.srcElement) { //ie
         if (!(s == odiv || odiv.contains(s))) {
             odiv.style.display = 'none';
