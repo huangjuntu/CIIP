@@ -440,106 +440,54 @@ $(document).ready(function () {
 		});
 	});
 
-	$('body').on('click', '#leap3', function () { // 商业不动产
+	$('body').on('click', '#leap3', function () { // 智能路灯网
 		socket.emit('exe', {
-			"no": 14
+			"no": 3
 		});
 	});
 
-	$('body').on('click', '#leap4', function () { //非银行金融
-		socket.emit('exe', {
-			"no": 15
-		});
-	});
-
-	$('body').on('click', '#leap5', function () { //智慧建筑
-		socket.emit('exe', {
-			"no": 0
-		});
-	});
-
-	$('body').on('click', '#leap6', function () { // 智慧交通
-		socket.emit('exe', {
-			"no": 6
-		});
-	});
-
-	$('body').on('click', '#leap7', function () { //智慧政务
-		socket.emit('exe', {
-			"no": 7
-		});
-	});
-
-	$('body').on('click', '#leap8', function () { //智慧医疗
-		socket.emit('exe', {
-			"no": 0
-		});
-	});
-
-	$('body').on('click', '#leap9', function () { //平安城市
-		socket.emit('exe', {
-			"no": 0
-		});
-	});
-
-	$('body').on('click', '#leap10', function () { // 食品溯源
+	$('body').on('click', '#leap4', function () { //智慧溯源
 		socket.emit('exe', {
 			"no": 5
 		});
 	});
 
-	$('body').on('click', '#leap11', function () { //智慧教育
+	$('body').on('click', '#leap5', function () { //智慧交通
+		socket.emit('exe', {
+			"no": 6
+		});
+	});
+
+	$('body').on('click', '#leap6', function () { // 智慧教育
 		socket.emit('exe', {
 			"no": 9
 		});
 	});
 
-	$('body').on('click', '#leap12', function () { //智慧水务
+	$('body').on('click', '#leap7', function () { //智慧水务
 		socket.emit('exe', {
-			"no": 12
+			"no": 10
 		});
 	});
 
-	$('body').on('click', '.btn13', function () {
+	$('body').on('click', '#leap8', function () { //智能建筑
 		socket.emit('exe', {
 			"no": 13
 		});
 	});
 
-	$('body').on('click', '.btn14', function () {
+	$('body').on('click', '#leap9', function () { //商务不动产
 		socket.emit('exe', {
 			"no": 14
 		});
 	});
 
-	$('body').on('click', '.btn15', function () {
+	$('body').on('click', '#leap10', function () { // 非银行金融
 		socket.emit('exe', {
 			"no": 15
 		});
 	});
 
-	$('body').on('click', '.btn16', function () {
-		socket.emit('exe', {
-			"no": 16
-		});
-	});
 
-	$('body').on('click', '.btn17', function () {
-		socket.emit('exe', {
-			"no": 17
-		});
-	});
-
-	$('body').on('click', '.btn18', function () {
-		socket.emit('exe', {
-			"no": 18
-		});
-	});
-
-	$('body').on('click', '.btn19', function () {
-		socket.emit('exe', {
-			"no": 19
-		});
-	});
 	//end 同步
 });
