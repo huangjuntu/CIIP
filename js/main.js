@@ -203,10 +203,6 @@ $(document).ready(function () {
 	// 	event.stopPropagation();
 	// })
 
-
-
-
-
 	$(".smartbox").find("li").click(function () {
 		$(".third").hide();
 		var myindex = $(this).index();

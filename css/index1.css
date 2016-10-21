@@ -130,12 +130,16 @@ select {
 
 .shalou span {
 	display: block;
-	width: 95px;
+	width: 150px;
 	height: 30px;
 	color: white;
 	line-height: 30px;
-	margin: 230px auto 0;
-	font-size: 16px;
+	margin: 230px auto ;
+	font-size: 17px;
+	position: absolute;
+    top: 0;
+    text-align: center;
+    left: 126px;
 }
 
 .button-icon {
@@ -171,7 +175,7 @@ select {
 	background: pink;
 	width: 400px;
 	height: 100px;
-	top: 69%;
+	top: 65%;
 	z-index: 99;
 }
 
