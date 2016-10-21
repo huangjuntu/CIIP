@@ -55,17 +55,8 @@ $(function() {
 	})
 });
 
-//右侧下拉框事件
-$('#mySelect').change(function() {
-	var select_value = $(this).children('option:selected').val()
-	if(select_value == 1) {
-		$('.desktop-two-center-one').css("display", "block");
-		$('.desktop-two-center-two').css("display", "none");
-		$('.desktop-two-center-three').css("display", "none");
-		$('.desktop-two-center-four').css("display", "none");
-		$('.desktop-two-center-five').css("display", "none");
-
-		$(".desktop-two-button").click(function() {
+//右侧按钮点击事件
+$(".desktop-two-button").click(function() {
 			$(".desktop-two-center-one .news").css("display", "none");
 			$(".shalou").css("display", "block");
 			$(".show-pic").css("display", "none");
@@ -77,6 +68,15 @@ $('#mySelect').change(function() {
 			}, 5000);
 			clearTimeout();
 		})
+//右侧下拉框事件
+$('#mySelect').change(function() {
+	var select_value = $(this).children('option:selected').val()
+	if(select_value == 1) {
+		$('.desktop-two-center-one').css("display", "block");
+		$('.desktop-two-center-two').css("display", "none");
+		$('.desktop-two-center-three').css("display", "none");
+		$('.desktop-two-center-four').css("display", "none");
+		$('.desktop-two-center-five').css("display", "none");
 
 	} else if(select_value == 2) {
 		$('.desktop-two-center-two').css("display", "block");
