@@ -100,12 +100,17 @@
 }
 
 .icon-1 span {
-    margin-top: 5px;
+    margin-top: 1px;
     display: block;
-    /* margin-left: 32px; */
+    margin-left: -4px;
     font-size: 18px;
     color: #1E1E5A;
     text-align: center;
+    font-family: "微软雅黑";
+    /* font-weight: bold; */
+    font-size: 1.9em;
+    width: 100px;
+    letter-spacing: 1px;
 }
 
 /*.show1 {
