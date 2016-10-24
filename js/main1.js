@@ -69,6 +69,7 @@ $(".desktop-two-button").click(function() {
 			$(".desktop-two-center-four .news").css("display", "none");
 			$(".desktop-two-center-five .news").css("display", "none");
 			
+			
 			$(".shalou").css("display", "block");
 			$(".show-pic").css("display", "none");
 			setTimeout(function() {
@@ -144,7 +145,7 @@ $(".shalou").live('mouseover', function() {
 	if(!timer2) {
 		timer2 = setTimeout(function() {
 			$(".code-img").css("display", "none");
-		}, 2000);
+		}, 5000);
 	}
 
 }).mouseleave(function() {

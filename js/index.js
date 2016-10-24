@@ -144,11 +144,11 @@ $('#leap1-1 .a,#leap1-1 .b,#leap1-1 .c').css("opacity","0");
 				$(".add2-1").css("display","none");
 			});
 
-			$(".add2").click(function() {
-				$(".add2").css("opacity", 0.4);
-				$("#show1").css("display", "none");
-				alert("已达上限哦");
-
-			});
+//			$(".add2").click(function() {
+//				$(".add2").css("opacity", 0.4);
+//				$("#show1").css("display", "none");
+//				alert("已达上限哦");
+//
+//			});
 		})
 })
