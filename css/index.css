@@ -693,6 +693,7 @@ span.zky  {
     bottom: 0;/*原来为0.5*/
     right: 15px;/*原来为2.5*/
     font-size:18px;
+    
 }
 /*  热插拔弹窗开始*/
 .dialog{font-family: "微软雅黑";position:fixed;opacity: 0.1;width:300px;height:180px;bottom:-300px;right:90px;z-index:999;background:rgba(255,255,255,0.5);border-radius: 6px;border:1px solid #eee;}

@@ -37,12 +37,21 @@ select {
 	margin-top: 3%;
 	padding-left: 4%;
 	box-shadow: 0 0 5px #999;
-	background: #d6eeff;
+	/*background: ;*/
 	font-size: 19px;
 	font-family: "微软雅黑";
 	color: #1D1657;
 	cursor: pointer;
+  /*appearance:none;*/
+  background: url(../img/arrow.png) no-repeat scroll 97% center #d6eeff;
+  border-style: none;
+  padding-right: 14px;
+  
+
+	
 }
+select::-ms-expand { display: none;}
+
 
 .desktop-two-center {
 	/*width: 90%;
@@ -101,13 +110,10 @@ select {
 .desktop-two-center .news {
 	width: 450px;
 	height: 347px;
-	margin-top: 10px;
-	margin-left: -5px;
-	/* padding: 5px; */
+	margin-top: -6px;
+	margin-left: -9px;
 	font-size: 19px;
-	/*background-image: url(../img/right-bottom.png);*/
 	background-size: 100% 100%;
-	/* background: pink; */
 	padding: 35px 20px 0px 20px;
 	font-family: "黑体";
 }
