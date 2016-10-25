@@ -417,12 +417,54 @@ $(document).ready(function () {
 //   热插拔监控结束*/
 	//同步信息到其他屏(没动之前序号)
 
-	$('body').on('click', '.zhguangboIcon', function () { //云计算
+	$('body').on('click', '.icon-tcc', function () { //雷达
 		socket.emit('exe', {
-			"no": 6
+			"no": 17
 		});
 	});
-	$('body').on('click', '.leixingIcon', function () { //云计算
+
+	$('body').on('click', '.icon-zhsw1', function () { //雷达
+		socket.emit('exe', {
+			"no": 10
+		});
+	});
+
+	$('body').on('click', '.icon-zhsw2', function () { //雷达
+		socket.emit('exe', {
+			"no": 12
+		});
+	});
+
+	$('body').on('click', '.icon-rador', function () { //雷达
+		socket.emit('exe', {
+			"no": 16
+		});
+	});
+
+	$('body').on('click', '.icon-gbw', function () { //雷达
+		socket.emit('exe', {
+			"no": 11
+		});
+	});
+
+	$('body').on('click', '.icon-traffic', function () { //轨道交通
+		socket.emit('exe', {
+			"no": 7
+		});
+	});
+
+	$('body').on('click', '.icon-kjw', function () { //科技网
+		socket.emit('exe', {
+			"no": 1
+		});
+	});
+	$('body').on('click', '.icon-yyy', function () { //云应用
+		socket.emit('exe', {
+			"no": 4
+		});
+	});
+
+	$('body').on('click', '.icon-lexing', function () { //乐行上海
 		socket.emit('exe', {
 			"no": 6
 		});

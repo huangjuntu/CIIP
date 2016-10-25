@@ -36,9 +36,6 @@
 				case 8:
 					window.location = "http://127.0.0.1/test/1014/ld.html"; //智慧交通-雷达
 					break;
-				// case 9:
-				// 	window.location = "http://127.0.0.1/test/1014/ZhiHuiJiaoTong/ZHJT-left.html"; //智慧交通-雷达
-				//   	break;
 				case 9:
 					window.location = "http://127.0.0.1/test/1014/ydxs_left.html"; //智慧教育
 				  	break;
@@ -62,7 +59,7 @@
 					window.location = "http://127.0.0.1/test/1014/hxzq_left.html"; //华鑫证券
 				  	break;
 				case 16:
-					window.location = "http://127.0.0.1/test/16.html"; //
+					window.location = "http://127.0.0.1/test/1014/ZhiHuiJiaoTong/ZHJT-left.html"; //智慧交通-雷达
 				  	break;
 				case 17:
 					window.location = "http://127.0.0.1/test/1014/17.html";
