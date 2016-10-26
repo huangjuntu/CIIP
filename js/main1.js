@@ -1,3 +1,4 @@
+	
 // 左下角菜单：鼠标点击其他区域消失
 document.getElementById('clitrigger').onclick = function(e) {
 		document.getElementById('menu').style.display = 'block';
@@ -157,8 +158,10 @@ $(".shalou").live('mouseover', function() {
 //
 
 // 开关数据整合按钮点击
+$(".jq22").css("display","none");
 $(".button-icon").toggle(
 	function() {
+		$(".jq22").css("display","block");
 		$("#desktop .icon").not(".icon_not").css("display", "none");
 		$("#button-icon").text("关闭整合模式");
 		$("#button-icon").removeClass("button-icon");
@@ -170,6 +173,7 @@ $(".button-icon").toggle(
 
 	},
 	function() {
+		$(".jq22").css("display","none");
 		$("#desktop .icon").not(".icon_not").css("display", "block");
 		$("#button-icon").text("开启整合模式");
 		$("#button-icon").removeClass("button-icon1");
@@ -194,14 +198,17 @@ $(".button-icon").toggle(
 // });
 
 // copy图标的ui的拖拽
+$('.yy_hide').hide();
+
 $(function() {
 	var d = $('.jq22').dad();
 	var target = $('.dropzone');
-
-	d.addDropzone(target, function(e) {
-		e.find('span').appendTo(target);
+	d.addDropzone(target, function(e){
+		e.find('span').show().appendTo(target);
 		e.remove();
+		
 	});
+	
 });
 
 //      左侧js左侧菜单开始
