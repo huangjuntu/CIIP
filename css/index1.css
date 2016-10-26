@@ -35,7 +35,7 @@ select {
 	border-radius: 8px;
 	height: 66%;
 	margin-top: 3%;
-	padding-left: 4%;
+	padding-left: 3%;
 	box-shadow: 0 0 5px #999;
 	/*background: ;*/
 	font-size: 19px;
@@ -45,7 +45,7 @@ select {
   /*appearance:none;*/
   background: url(../img/arrow.png) no-repeat scroll 97% center #d6eeff;
   border-style: none;
-  padding-right: 14px;
+  padding-right: 25px;
   
 
 	
