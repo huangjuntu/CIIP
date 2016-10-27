@@ -417,6 +417,12 @@ $(document).ready(function () {
 //   热插拔监控结束*/
 	//同步信息到其他屏(没动之前序号)
 
+	$('body').on('click', '.icon-sckj', function () { //雷达
+		socket.emit('exe', {
+			"no": 18
+		});
+	});
+
 	$('body').on('click', '.icon-tcc', function () { //雷达
 		socket.emit('exe', {
 			"no": 17
@@ -478,7 +484,7 @@ $(document).ready(function () {
 
 	$('body').on('click', '#leap2', function () { // 智慧制造
 		socket.emit('exe', {
-			"no": 0
+			"no": 2
 		});
 	});
 
