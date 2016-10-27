@@ -6,7 +6,7 @@ $(function() {
 		["http://127.0.0.1/test/1014/lxsh_main.html"],//2  云应用商店
 		["http://127.0.0.1/test/1014/zhzz_main.html"],//3  智能制造 http://www.q-map.com.cn:8280/TaoPuSmartCity
 		["http://127.0.0.1/test/1014/zhld_main.html"],//4  智能路灯网
-		["http://127.0.0.1/data"],//5  智慧溯源
+		["http://127.0.0.1/foodreal/index.html"],//5  智慧溯源
 		["http://127.0.0.1/test/1014/ZHJT-index.html"],//6  岸基监视雷达
 		["http://127.0.0.1/test/1014/gdjt_main.html"],//7  智慧轨交
 		["http://127.0.0.1/test/1014/lxsh_main.html"],//8  乐行上海
