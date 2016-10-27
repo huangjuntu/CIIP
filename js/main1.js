@@ -24,6 +24,11 @@ document.getElementById('clitrigger').onclick = function(e) {
 	//         }
 	//     }
 	// }
+	
+	
+//	menu
+	
+
 
 // 右键切换模式（管理者，仪表盘）
 $(function() {

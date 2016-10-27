@@ -168,12 +168,20 @@ $(document).ready(function () {
 			}
 		}
 	}
-	var show1 = 1;
-	$(".clitrigger").click(function () {
-		if (show1 == 1) {
+	var show1=1;
+	$(".clitrigger").click(function(){
+		if(show1==1){
 			$(".first").fadeIn();
+			show1=0;
+		}
+		else{
+			$(".first").fadeOut();
+	      	closeall();
+	      	show1=1;
 		}
 	});
+	
+	
 
 	//数据整合页面链接iframe置顶
 	$(".istack").click(function () {
