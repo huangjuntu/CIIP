@@ -96,7 +96,9 @@ $(document).ready(function () {
 
 	function closeall() {
 		$(".first").fadeOut();
-		$(".secondclose ").hide();
+		$(".secondclose").hide();
+		$(".thirdclose-2").hide();
+		
 		$(".thirdclose").hide();
 		$(".test").hide();
 		$(".menucom").hide();
@@ -212,7 +214,9 @@ $(document).ready(function () {
 	// })
 
 	$(".smartbox").find("li").click(function () {
+		
 		$(".third").hide();
+		$(".third-2").hide();//必须的，不然会有影响
 		var myindex = $(this).index();
 		$(".second").find("div").eq(myindex).css({
 			"display": "block"
@@ -270,7 +274,7 @@ $(document).ready(function () {
 	})
 
 
-	//第二层menu
+	//第二层menu  智慧建筑，交通平安城市点击
 	$(".inesainside1").find("li").click(function (e) {
 		var pointY = e.pageY;
 		var myindex = $(this).index();
@@ -289,6 +293,28 @@ $(document).ready(function () {
 		$(this).find(".tri").addClass("trihover");
 		$(this).siblings().find(".tri").removeClass("trihover");
 	});
+	//第二层menu  可切换云计算内核
+	$(".inesainside1-1").find("li").click(function (e) {
+//		var pointY = e.pageY;
+		var myindex = $(this).index();
+		$(".third-2").css({
+			"margin-bottom": "204px",
+			"margin-right": "-26px",
+			"display": "block"
+		})
+		$(".third-2").find("div").eq(myindex).css({
+			"display": "block",
+		}).siblings().css({
+			"display": "none"
+		});
+		$(this).find(".tri").addClass("trihover");
+		$(this).siblings().find(".tri").removeClass("trihover");
+	})
+	.mouseover(function (e) {
+		$(this).find(".tri").addClass("trihover");
+		$(this).siblings().find(".tri").removeClass("trihover");
+	});
+	
 
 
 	//3rd menu

@@ -255,7 +255,23 @@ li {
     line-height: 50px;
     font-size: 16px;
     color:#7388a5;
-    background:#153869;
+    background:#153869 url(../img/sanjiao2.png) no-repeat 117px center;
+    border-bottom:1px solid #597aa5;
+}
+.inesainside1-1 {
+    width: 160px;
+    cursor: pointer;
+    /*margin-bottom:0px;*/
+}
+
+.inesainside1-1 li {
+    width: 160px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color:#7388a5;
+    /*background:#153869;*/
     border-bottom:1px solid #597aa5;
 }
 
@@ -266,9 +282,37 @@ li {
 .inesainside2 li{
     width: 240px;
     text-align: center;
-    height: 40px;
+    height: 45px;
     font-size: 14px;
-    line-height: 40px;
+    line-height: 45px;
+    color: #7388a5;
+    background: #153869;
+    border-bottom: 1px solid #597aa5;
+}
+.second_menu2{
+	background:#153869;
+}
+.inesainside2-1{
+    width: 100px;
+    cursor: pointer;
+}
+.inesainside2-1 li{
+    width: 100px;
+    text-align: center;
+    height: 50px;
+    font-size: 14px;
+    line-height: 45px;
+    color: #7388a5;
+    background: #153869;
+    border-bottom: 1px solid #597aa5;
+    /*border-right: 1px solid #597aa5;*/
+}
+.inesainside3 li{
+    width: 133px;
+    text-align: center;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
     color: #7388a5;
     background: #153869;
     border-bottom: 1px solid #597aa5;

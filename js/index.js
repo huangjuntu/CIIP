@@ -24,7 +24,9 @@ $(function() {
 		["http://www.baidu.com"],//18  金领之都  地图
 		["http://www.baidu.com"],//19  上海  地图
 		["http://www.baidu.com"],//20  银川  地图
-		["http://www.baidu.com"]//21  仪电总部  地图
+		["http://www.baidu.com"],//21  仪电总部  地图
+		["http://www.jq22.com"],  //22  九州云等
+		["http://www.baidu.com"]  //23  xsky等
 		
 	];
 	$(".desk_left_bottom_one").click(function() {
@@ -80,7 +82,16 @@ $(function() {
 		$("#icon_iframw").attr("src", companys[y]);
 		
 	});
-
+	
+//左下角：九州云等 xsky等 点击
+	$('.inesainside2-1 li').click(function(event) {
+		$(".logo2").hide();
+		$(".iframe_fa").show();
+		var x = $(this).attr('href');
+		var y = x.substring(2);
+		$("#icon_iframw").attr("src", companys[y]);
+		
+	});
 
 //地图的点击
 //	$(".map-img").click(function(){

@@ -27,15 +27,24 @@
 .desk_right{width:500px;height:1020px;background:#1e5096;}
 .first_menu{width:100%;background:#153869 url(../img/sanjiao2.png) no-repeat 240px center;
 			color:#7388a5;font-size:20px;text-align:center;border-bottom:1px solid #597aa5;float:left;}
+.second_menu{background:#153869 url(../img/sanjiao2.png) no-repeat 150px center;
+			}			
+
 .first_menu_style{line-height:50px;}
 .first_menu img{margin:9px 0;}
 .third{float:right;width: 240px;}
 .thirdclose{display: none;}
+.third-2{float:right;width: 240px;}
+.thirdclose-2{display: none;}
+
 .second{width:135px;margin-left: 270px; position: absolute;bottom: 0;}
 .secondclose{display:none;}
 
 .smartbox li:hover{color:#fff;background:#1e5096 url(../img/sanjiao1.png) no-repeat 240px center;}
-.inesainside1 li:hover,.inesainside2 li:hover{color:#fff;background:#1e5096;}
+.second_menu:hover{color:#fff;background:#1e5096 url(../img/sanjiao1.png) no-repeat 151px center;}
+/*.inesainside1 li:hover,.inesainside2 li:hover,.inesainside2-1 li:hover,{color:#fff;background:#1e5096;}*/
+.inesainside1 li:hover{color:#fff;background:#1e5096 url(../img/sanjiao1.png) no-repeat 117px center;}
+.second_menu2:hover{color:#fff;background:#1e5096; }
 .img2{display:none;}
 .white{color:#fff;background: #153869;}
 .icon{font-size:20px;}

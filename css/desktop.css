@@ -83,6 +83,7 @@ div.ui-resizable-handle {
 	margin: 10px auto 5px;
 	width: 90px;
 	height: 70px;
+	border:none;
 }
 
 .icon:hover,

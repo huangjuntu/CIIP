@@ -164,38 +164,38 @@ $(".shalou").live('mouseover', function() {
 
 // 开关数据整合按钮点击
 $(".jq22").css("display","none");
-$(".button-icon").toggle(
-	function() {
-		$(".jq22").css("display","block");
-		$("#desktop .icon").not(".icon_not").css("display", "none");
-		$("#button-icon").text("关闭整合模式");
-		$("#button-icon").removeClass("button-icon");
-		$("#button-icon").addClass("button-icon1");
-		$(".copy5").css("display", "block");
-		$(".copy7").css("display", "block");
-		$(".copy1").css("display", "block");
-		$(".copy8").css("display", "block");
-
-	},
-	function() {
-		$(".jq22").css("display","none");
-		$("#desktop .icon").not(".icon_not").css("display", "block");
-		$("#button-icon").text("开启整合模式");
-		$("#button-icon").removeClass("button-icon1");
-		$("#button-icon").addClass("button-icon");
-
-		$("#leap5-1").css("display", "none");
-		$("#leap1-1").css("display", "none");
-		$("#leap7-1").css("display", "none");
-		$("#leap8-1").css("display", "none");
-
-		$(".copy5").css("display", "none");
-		$(".copy1").css("display", "none");
-		$(".copy7").css("display", "none");
-		$(".copy8").css("display", "none");
-	}
-
-);
+//$(".button-icon").toggle(
+//	function() {
+//		$(".jq22").css("display","block");
+//		$("#desktop .icon").not(".icon_not").css("display", "none");
+//		$("#button-icon").text("关闭整合模式");
+//		$("#button-icon").removeClass("button-icon");
+//		$("#button-icon").addClass("button-icon1");
+//		$(".copy5").css("display", "block");
+//		$(".copy7").css("display", "block");
+//		$(".copy1").css("display", "block");
+//		$(".copy8").css("display", "block");
+//
+//	},
+//	function() {
+//		$(".jq22").css("display","none");
+//		$("#desktop .icon").not(".icon_not").css("display", "block");
+//		$("#button-icon").text("开启整合模式");
+//		$("#button-icon").removeClass("button-icon1");
+//		$("#button-icon").addClass("button-icon");
+//
+//		$("#leap5-1").css("display", "none");
+//		$("#leap1-1").css("display", "none");
+//		$("#leap7-1").css("display", "none");
+//		$("#leap8-1").css("display", "none");
+//
+//		$(".copy5").css("display", "none");
+//		$(".copy1").css("display", "none");
+//		$(".copy7").css("display", "none");
+//		$(".copy8").css("display", "none");
+//	}
+//
+//);
 
 // $(".copy1").draggable({
 //     helper: "clone",
