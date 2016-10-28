@@ -198,11 +198,11 @@ $(function() {
 			$(".add2-1").css("display", "none");
 		});
 	//ETL下面的点击
-		$(".secondclose .db_click").click(function() {
+		$(".secondclose .db_click").dblclick(function() {
 			$(".db_click1").css("display", "block");
 			$(this).css("display", "none");
 		})
-		$(".secondclose .db_click1").click(function() {
+		$(".secondclose .db_click1").dblclick(function() {
 			$(".db_click").css("display", "block");
 			$(this).css("display", "none");
 		})
