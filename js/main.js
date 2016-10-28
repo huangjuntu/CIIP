@@ -234,6 +234,7 @@ $(document).ready(function () {
 			$(this).siblings().find(".tri").removeClass("trion").removeClass("trion2");
 			$(".menucom").hide();
 			$(".menu4").hide();
+//			$(".db_click1").hide();
 
 		}
 		$(this).find(".tri").addClass("trihover");
