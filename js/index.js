@@ -56,7 +56,7 @@ $(function() {
 		})
 		$(this).find("img").attr("src", $(this).find("img").attr("src2"));
 		
-//公司链接 点击
+//公司链接点击
 		var x = $(this).attr('href');
 		var y=x.substring(2);//截取字符串
 		$("#icon_iframw").attr("src", companys[y]);
@@ -93,13 +93,6 @@ $(function() {
 		
 	});
 
-//地图的点击
-//	$(".map-img").click(function(){
-//		var href1=$(this).attr('href');
-//		$(".logo2").hide();
-//		$(".iframe_fa").show();
-//		$("#icon_iframw").attr("src", href1);
-//	});
 //新增加交通三项
 $('#leap5-1 .a,#leap5-1 .b,#leap5-1 .c').css("opacity","0");
 	$("#leap5").mouseover(function(event) {
