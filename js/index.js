@@ -1,22 +1,24 @@
 $(function() {
 	//	序号从0~15开始,对应index的if0~15，一一对应，共16个
 	var companys = [
-		["http://127.0.0.1/test/1014/shkjw_main.html"], //0  数据中心
-		["http://127.0.0.1/test/1014/yyy_main.html"], //1  双创空间
-		["http://127.0.0.1/test/1014/lxsh_main.html"], //2  云应用商店
-		["http://127.0.0.1/test/1014/zhzz_main.html"], //3  智能制造 http://www.q-map.com.cn:8280/TaoPuSmartCity
-		["http://127.0.0.1/test/1014/zhld_main.html"], //4  智能路灯网
-		["http://127.0.0.1/foodreal/index.html"], //5  智慧溯源
-		["http://127.0.0.1/test/1014/ZHJT-index.html"], //6  岸基监视雷达
-		["http://127.0.0.1/test/1014/gdjt_main.html"], //7  智慧轨交
-		["http://127.0.0.1/test/1014/lxsh_main.html"], //8  乐行上海
-		["http://127.0.0.1/test/1014/ydxs_main.html"], //9  智慧教育
-		["http://127.0.0.1/test/1014/zhsw_main.html"], //10  智慧供水
-		["http://127.0.0.1/test/1014/zhsw_main.html"], //11  园区水质管理
-		["http://127.0.0.1/test/1014/gbw_main.html"], //12  智慧广播网
-		["http://127.0.0.1/test/1014/tcc_main.html"], //13  智能停车场
-		["http://127.0.0.1/test/1014/hxgf_main.html"], //14  商业不动产
-		["http://127.0.0.1/test/1014/hxzq_main.html"], //15  非银行金融
+
+		["http://127.0.0.1/test/1014/shkjw_main.html"],//0  数据中心
+		["http://127.0.0.1/test/1014/sckj_main.html"],//1  双创空间
+		["http://127.0.0.1/test/1014/yyy_main.html"],//2  云应用商店
+		["http://127.0.0.1/test/1014/zhzz_main.html"],//3  智能制造 http://www.q-map.com.cn:8280/TaoPuSmartCity
+		["http://127.0.0.1/test/1014/zhld_main.html"],//4  智能路灯网
+		["http://127.0.0.1/foodreal/index.html"],//5  智慧溯源
+		["http://127.0.0.1/test/1014/ZHJT-index.html"],//6  岸基监视雷达
+		["http://127.0.0.1/test/1014/gdjt_main.html"],//7  智慧轨交
+		["http://127.0.0.1/test/1014/lxsh_main.html"],//8  乐行上海
+		["http://127.0.0.1/test/1014/ydxs_main.html"],//9  智慧教育
+		["http://127.0.0.1/test/1014/zhsw_main.html"],//10  智慧供水
+		["http://127.0.0.1/test/1014/zhsw_main.html"],//11  园区水质管理
+		["http://127.0.0.1/test/1014/gbw_main.html"],//12  智慧广播网
+		["http://127.0.0.1/test/1014/tcc_main.html"],//13  智能停车场
+		["http://127.0.0.1/test/1014/hxgf_main.html"],//14  商业不动产
+		["http://127.0.0.1/test/1014/hxzq_main.html"],//15  非银行金融
+
 		//点击右下动画后的桃浦科技地址		
 		["http://www.4399.com"], //16  桃浦科技智慧城管理系统
 		//点击右侧图标地址链接
