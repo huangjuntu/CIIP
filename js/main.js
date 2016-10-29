@@ -452,66 +452,7 @@ $(document).ready(function () {
 //   热插拔监控结束*/
 	//同步信息到其他屏(没动之前序号)
 
-	$('body').on('click', '.icon-sckj', function () { //雷达
-		socket.emit('exe', {
-			"no": 18
-		});
-	});
-
-	$('body').on('click', '.icon-tcc', function () { //雷达
-		socket.emit('exe', {
-			"no": 17
-		});
-	});
-
-	$('body').on('click', '.icon-zhsw1', function () { //雷达
-		socket.emit('exe', {
-			"no": 10
-		});
-	});
-
-	$('body').on('click', '.icon-zhsw2', function () { //雷达
-		socket.emit('exe', {
-			"no": 12
-		});
-	});
-
-	$('body').on('click', '.icon-rador', function () { //雷达
-		socket.emit('exe', {
-			"no": 16
-		});
-	});
-
-	$('body').on('click', '.icon-gbw', function () { //雷达
-		socket.emit('exe', {
-			"no": 11
-		});
-	});
-
-	$('body').on('click', '.icon-traffic', function () { //轨道交通
-		socket.emit('exe', {
-			"no": 7
-		});
-	});
-
 	$('body').on('click', '.icon-kjw', function () { //科技网
-		socket.emit('exe', {
-			"no": 1
-		});
-	});
-	$('body').on('click', '.icon-yyy', function () { //云应用
-		socket.emit('exe', {
-			"no": 4
-		});
-	});
-
-	$('body').on('click', '.icon-lexing', function () { //乐行上海
-		socket.emit('exe', {
-			"no": 6
-		});
-	});
-
-	$('body').on('click', '#leap1', function () { //云计算
 		socket.emit('exe', {
 			"no": 1
 		});
@@ -528,16 +469,26 @@ $(document).ready(function () {
 			"no": 3
 		});
 	});
+	$('body').on('click', '.icon-yyy', function () { //云应用
+		socket.emit('exe', {
+			"no": 4
+		});
+	});
 
 	$('body').on('click', '#leap4', function () { //智慧溯源
 		socket.emit('exe', {
 			"no": 5
 		});
 	});
-
-	$('body').on('click', '#leap5', function () { //智慧交通
+	$('body').on('click', '.icon-lexing', function () { //乐行上海
 		socket.emit('exe', {
 			"no": 6
+		});
+	});
+	
+	$('body').on('click', '.icon-traffic', function () { //轨道交通
+		socket.emit('exe', {
+			"no": 7
 		});
 	});
 
@@ -546,30 +497,49 @@ $(document).ready(function () {
 			"no": 9
 		});
 	});
-
-	$('body').on('click', '#leap7', function () { //智慧水务
+	$('body').on('click', '.icon-zhsw1', function () { //水务水质
 		socket.emit('exe', {
 			"no": 10
 		});
 	});
-
-	$('body').on('click', '#leap8', function () { //智能建筑
+	$('body').on('click', '.icon-gbw', function () { //广播
 		socket.emit('exe', {
-			"no": 13
+			"no": 11
 		});
 	});
-
+	$('body').on('click', '.icon-zhsw2', function () { //园区税务
+		socket.emit('exe', {
+			"no": 12
+		});
+	});
 	$('body').on('click', '#leap9', function () { //商务不动产
 		socket.emit('exe', {
 			"no": 14
 		});
 	});
-
 	$('body').on('click', '#leap10', function () { // 非银行金融
 		socket.emit('exe', {
 			"no": 15
 		});
 	});
+	
+	$('body').on('click', '.icon-rador', function () { //雷达
+		socket.emit('exe', {
+			"no": 16
+		});
+	});
+	$('body').on('click', '.icon-tcc', function () { //停车
+		socket.emit('exe', {
+			"no": 17
+		});
+	});
+	$('body').on('click', '.icon-sckj', function () { //双创空间
+		socket.emit('exe', {
+			"no": 18
+		});
+	});
+
+	
 
 
 	//end 同步
